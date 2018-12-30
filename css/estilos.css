@@ -1,0 +1,80 @@
+/*Estilos del Index*/
+*
+{
+	margin:0;
+}
+body{
+  background:  #02010a;
+  font-family: Dancing Script;
+}
+#contenido{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  text-align: center;
+
+}
+#cabecera{
+  background: #5b7989;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+#cabecera h1,a{
+  margin: 10px;
+  color: #fff;
+}
+#cabecera h1{
+  text-shadow: 2px 2px 2px #02010a;
+  padding: 10px 35% 10px 10px;
+  display: inline-block;
+
+}
+#navegador {
+  display: inline-block;
+}
+#imagenes{
+  width: 100%;
+}
+#imagenCentral{
+  background: #82c3a6;
+}
+#imagenCentral img{
+  width: 80%;
+  margin: 10px;
+}
+img [class*="bloque"]{
+  min-height: 100px;
+  flex: 1 2 50%;
+}
+.bloque1{
+  width: 50%;
+  height: 100%;
+  order: 1;
+}
+.bloque2{
+  width: 50%;
+  height: 100%;
+  order: 2;
+}
+#imagenSecundarias{
+  display: flex;
+  flex-flow: row wrap;
+  background: #d5c75f;
+  border: 1px;
+}
+#imagenSecundarias img{
+  margin-top: 20px;
+  border: 2px solid black;
+  width: 70%;
+}
+#imgIzq{
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+#imgIzq:hover{
+  transform: rotate(10deg);
+  box-shadow: 2px 2px #82c3a6;
+
+}
