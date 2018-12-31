@@ -142,4 +142,7 @@ body{
 		margin: 10px;
 		width: 80%;
 	}
+	.cabecera {
+		padding-bottom: 10px;
+	}
 }
