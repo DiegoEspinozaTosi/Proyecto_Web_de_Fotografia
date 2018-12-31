@@ -12,23 +12,17 @@ body{
   margin-right: auto;
   max-width: 900px;
   text-align: center;
-
 }
-#cabecera{
+.cabecera{
   background: #5b7989;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
+  border-radius: 10px 10px 0 0;
 }
-#cabecera h1,a{
-  margin: 10px;
+.cabecera a, .cabecera h1{
   color: #fff;
+  margin: 10px;
 }
-#cabecera h1{
+.cabecera h1{
   text-shadow: 2px 2px 2px #02010a;
-  padding: 10px 35% 10px 10px;
-  display: inline-block;
-
 }
 #navegador {
   display: inline-block;
@@ -39,42 +33,113 @@ body{
 #imagenCentral{
   background: #82c3a6;
 }
+#imagenes img{
+  box-shadow: 2px 2px #02010a;
+}
 #imagenCentral img{
   width: 80%;
   margin: 10px;
 }
-img [class*="bloque"]{
-  min-height: 100px;
-  flex: 1 2 50%;
-}
-.bloque1{
-  width: 50%;
-  height: 100%;
-  order: 1;
-}
-.bloque2{
-  width: 50%;
-  height: 100%;
-  order: 2;
-}
-#imagenSecundarias{
-  display: flex;
-  flex-flow: row wrap;
+
+#imagenSecundarias, #imagenes{
   background: #d5c75f;
   border: 1px;
 }
 #imagenSecundarias img{
   margin-top: 20px;
-  border: 2px solid black;
   width: 70%;
+  border: 2px black solid;
 }
-#imgIzq{
+#imgIzq, #imgDer{
   transition-property: all;
   transition-duration: 1s;
 }
-
 #imgIzq:hover{
   transform: rotate(10deg);
   box-shadow: 2px 2px #82c3a6;
+  border: 2px solid #82c3a6;
+}
+#imgDer:hover{
+  transform: translate(20px,-5px);
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px solid #82c3a6;
+}
+#imagenSecundarias a, .piePagina a{
+  color: #000;
+}
+.piePagina{
+  background: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+	margin-bottom: 2.5px;
+}
 
+.piePagina h2{
+	margin-bottom: 5px;
+}
+.piePagina img{
+	width: 15px;
+	box-shadow: none;
+}
+#columna3 a{
+	text-decoration: none;
+}
+#img1{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+#img2, #img4, #img6{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+#img3{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+
+@media all and (min-width: 900px) {
+	#contenido{
+		width: 900px;
+	}
+	.cabecera h1{
+	  text-shadow: 2px 2px 2px #02010a;
+	  padding: 10px 35% 10px 10px;
+	  display: inline-block;
+	}
+	.bloque1, .bloque2{
+	  width: 50%;
+	}
+	#imagenSecundarias{
+	  display: flex;
+	  flex-flow: row wrap;
+	}
+	.piePagina{
+	  display: flex;
+	  flex-flow: row;
+	}
+	#columna1, #columna2, #columna3, #columna4{
+		width: 25%;
+		text-align: left;
+		padding: 30px 25px 40px 25px;
+	}
+	.imgs{
+		margin: 10px;
+		width: 30%;
+	}
+}
+
+@media all and (max-width: 899px) {
+	.piePagina{
+	  display: flex;
+	  flex-flow: column;
+	}
+	#columna1, #columna2, #columna3, #columna4{
+		width: 100%;
+		text-align: left;
+		padding: 20px 25px 30px 25px;
+	}
+	.imgs{
+		margin: 10px;
+		width: 80%;
+	}
 }
